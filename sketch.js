@@ -81,10 +81,10 @@ function setup() {
 
 function draw() {
   background(231, 201, 141); 
-  if (principal_is_here && studIsSleeping()) { //if principal arrives and more than 1 student is sleeping
-    gameIsOver = true; //game is over
+  if (principal_is_here && studIsSleeping()) {
+    gameIsOver = true;
   } else{
-    ; // if no students are sleeping, keep playing
+    ;
   }
   //COLLISION
    ms_terrell.collide(fStudent1);
@@ -105,45 +105,44 @@ function draw() {
 // }
 
 function principalArrives(){
-	if(!gameIsOver){ //if game isnt over
-      //initialize principal sprite
-      principal_is_here = true; //principal is here
+	if(!gameIsOver){
+      //initializing principal sprite
+      principal_is_here = true;
       principal = createSprite(40, y);
       principal.addImage(loadImage('assets/principal.png'));
       (principal).scale = (0.75)
       drawSprites();
 	}
 }
-function generatesSleeping() { 
-  	if(!gameIsOver){ //if game isnt over
-    // creates "sleeping" indicator
+function generatesSleeping() {
+  	if(!gameIsOver){
       sleeping = createSprite(200, 200);
       sleeping.addImage(loadImage('assets/sleeping.png'));
       sleeping.scale = 0.05;
-      sleeping.position.x = zX; //random x position
-  	  sleeping.position.y = zY; //random y position
-      students_sleeping++; // if sprite appears, a student is "sleeping"
+      sleeping.position.x = zX;
+  	  sleeping.position.y = zY;
+      students_sleeping++;
     }
 }
 function handleCollision(spriteA, spriteB) {
-	spriteA.remove(); //user collects sprite
-  if (!gameIsOver) { //as long as game isnt over
+	spriteA.remove();
+  if (!gameIsOver) {
     zY = random(height);
     zX = random(width);
-    students_sleeping--; // one less student "sleeping"
-		generatesSleeping(); //generate another random sprite
+    students_sleeping--;
+		generatesSleeping();
   }
 }
 
 function handleTime() {
-  if (time > 0) { // if time isnt up
-    time -= 1; //decrememnt time
-  } else { //if time IS up
-    principalArrives(); //principal spawns
-    text(`PRINCIPAL HAS ARRIVED!`, 20, 60); //text displayed when she arrives
+  if (time > 0) {
+    time -= 1;
+  } else {
+    principalArrives();
+    text(`PRINCIPAL HAS ARRIVED!`, 20, 60);
   }
 }
-function keyPressed() {//allows user to control ms terrell via arrow keys 
+function keyPressed() {//allows user to control via arrow keys 
  if(!gameIsOver){ // when game is over, user cannot move
  if (keyIsDown(LEFT_ARROW)) {
     ms_terrell.position.x -= 5;
@@ -163,10 +162,10 @@ function keyPressed() {//allows user to control ms terrell via arrow keys
  }
 }
 function studIsSleeping() {
-  if (students_sleeping > 0) { //if there is 1 or more student sleeping
+  if (students_sleeping > 0) { //if there is 1 or more stud sleeping
     return true; // return true
   }
   if (students_sleeping == 0) { //if no students are sleeping
-    return false; //return false
+    return false;
   }
 }
