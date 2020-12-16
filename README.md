@@ -2,8 +2,8 @@
 Project made in Tech Scholars ONLINE: Video Games  (by the New-York Historical Society)
 
 ### Links
-- <a href = "https://tech-scholars-project-chigozirim.techscholarsvid.repl.co"> Click to play! </a>
-- <a href = "https://www.nyhistory.org/education/teen-programs/tech-scholars"> Click to learn more about Tech Scholars! </a>
+- <a href = "https://tech-scholars-project-chigozirim.techscholarsvid.repl.co" target="_blank"> Click to play! </a>
+- <a href = "https://www.nyhistory.org/education/teen-programs/tech-scholars" target="_blank"> Click to learn more about Tech Scholars! </a>
 
 ### Background info
   The date is 1903, and the player is Mary Church Terrell. She is a teacher in the
