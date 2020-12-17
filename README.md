@@ -17,4 +17,9 @@ drowsy, and one by one, they each start falling asleep.
 As Mrs. Terrell, you must keep all the students awake before Mrs. Anna J. Coope, the principal of M
 Street High School, walks in.
 
+### 🚨Note🚨
+- You must be on a computer to play this game
+- Use arrow keys to navigate the classroom
+- Refresh the page to play again
+
 ### Enjoy!
